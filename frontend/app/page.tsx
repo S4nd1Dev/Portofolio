@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-// 1. Tambahkan impor useRouter di sini
 import { useRouter } from 'next/navigation';
 import { 
   Terminal, Cpu, Layers, ArrowUpRight, BookOpen, 
@@ -16,7 +15,6 @@ const GithubIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Home() {
-  // 2. Inisialisasi router di dalam komponen
   const router = useRouter();
 
   const containerVariants = {
@@ -87,7 +85,6 @@ export default function Home() {
           </motion.div>
 
           {/* Card 2: Featured Project - SisaBisa */}
-          {/* 3. Tambahkan event onClick dan kursor pointer pada Card SisaBisa */}
           <motion.div 
             variants={itemVariants} 
             onClick={() => router.push('/projects/sisabisa')}
@@ -146,10 +143,14 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Card 4: Web Desa Project */}
-          <motion.div variants={itemVariants} className="xl:col-span-4 rounded-3xl bg-zinc-900/40 border border-white/5 p-6 flex flex-col group hover:border-cyan-500/30 transition-all duration-300">
+          {/* Card 4: Web Desa Project (Sudah Bisa Diklik) */}
+          <motion.div 
+            variants={itemVariants} 
+            onClick={() => router.push('/projects/sukajaya-lempasing')}
+            className="xl:col-span-4 rounded-3xl bg-zinc-900/40 border border-white/5 p-6 flex flex-col group hover:border-cyan-500/30 transition-all duration-300 cursor-pointer"
+          >
              <div className="w-full h-32 bg-zinc-950 rounded-2xl border border-white/5 mb-4 flex items-center justify-center">
-              <Map className="w-8 h-8 text-cyan-500/50" />
+              <Map className="w-8 h-8 text-cyan-500/50 group-hover:scale-110 transition-transform duration-500" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Sukajaya Lempasing</h3>
             <p className="text-sm text-zinc-400 mb-4">
@@ -160,11 +161,15 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Card 5: Cybersecurity */}
-          <motion.div variants={itemVariants} className="xl:col-span-4 rounded-3xl bg-zinc-900/40 border border-white/5 p-6 flex flex-col group hover:border-rose-500/30 transition-all duration-300">
+          {/* Card 5: Cybersecurity (Sudah Bisa Diklik) */}
+          <motion.div 
+            variants={itemVariants} 
+            onClick={() => router.push('/projects/vulncheck')}
+            className="xl:col-span-4 rounded-3xl bg-zinc-900/40 border border-white/5 p-6 flex flex-col group hover:border-rose-500/30 transition-all duration-300 cursor-pointer"
+          >
              <div className="w-full h-32 bg-zinc-950 rounded-2xl border border-white/5 mb-4 flex items-center justify-center relative">
               <div className="absolute inset-0 bg-rose-500/5 rounded-2xl border border-rose-500/10"></div>
-              <ShieldAlert className="w-8 h-8 text-rose-500/50 z-10" />
+              <ShieldAlert className="w-8 h-8 text-rose-500/50 z-10 group-hover:scale-110 transition-transform duration-500" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">VulnCheck & Sec</h3>
             <p className="text-sm text-zinc-400 mb-4">
