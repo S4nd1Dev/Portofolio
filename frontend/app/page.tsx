@@ -146,7 +146,7 @@ export default function Home() {
           {/* Card 4: Web Desa Project (Sudah Bisa Diklik) */}
           <motion.div 
             variants={itemVariants} 
-            onClick={() => router.push('/projects/sukajaya-lempasing')}
+            onClick={() => router.push('/projects/kkn')}
             className="xl:col-span-4 rounded-3xl bg-zinc-900/40 border border-white/5 p-6 flex flex-col group hover:border-cyan-500/30 transition-all duration-300 cursor-pointer"
           >
              <div className="w-full h-32 bg-zinc-950 rounded-2xl border border-white/5 mb-4 flex items-center justify-center">
