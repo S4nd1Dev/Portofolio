@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { ExternalLink, Sun, Moon } from 'lucide-react';
 
 // --- IMPORT KOMPONEN EKSTERNAL ---
-import Preloader from '@/components/Preloader';
+import Preloader from '@/components/PreLoader';
 import HeroSection from '@/components/HeroSection';
 import MetricsCounter from '@/components/MetricsCounter';
 import ExperienceSection from '@/components/ExperienceSection';
